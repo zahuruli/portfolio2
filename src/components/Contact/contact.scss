@@ -1,0 +1,98 @@
+@import "../../global.scss";
+.contact {
+  display: flex;
+  background-color: white;
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  .left {
+    flex: 1;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h2 {
+      font-size: 30px;
+
+      @include mobile {
+        font-size: 25px;
+      }
+    }
+
+    form {
+      height: 70%;
+      width: 70%;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: column;
+
+      @include mobile {
+        height: 65%;
+      }
+
+      input {
+        width: 300px;
+        height: 30px;
+        font-size: 14px;
+        padding: 10px;
+        border-radius: 10px;
+
+        @include mobile {
+          border-radius: 10px;
+        }
+      }
+
+      textarea {
+        width: 300px;
+        height: 150px;
+        font-size: 14px;
+        padding: 10px;
+        border-radius: 10px;
+
+        @include mobile {
+          height: 100px;
+          margin: 5px 0;
+          border-radius: 10px;
+        }
+      }
+      button {
+        width: 150px;
+        height: 30px;
+        color: whitesmoke;
+        background-color: crimson;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-weight: 500;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      span {
+        color: lightgreen;
+
+        @include mobile {
+          font-size: 12px;
+          padding: 5px;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}
